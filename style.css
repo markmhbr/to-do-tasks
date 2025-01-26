@@ -1,0 +1,76 @@
+label{
+    width: 30%;
+}
+input[type="text"] {
+    border: 0;
+    width: 75%;
+}
+input:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+input::placeholder {
+    visibility: hidden; /* Sembunyikan secara default */
+    transition: visibility 0.2s, opacity 0.2s ease;
+    opacity: 0;
+}
+input:focus::placeholder {
+    visibility: visible; /* Tampilkan saat fokus */
+    opacity: 1;
+}
+.card {
+    width: 50%;
+    margin: auto;
+}
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(img/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(img/cheking.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
+
+.uhuy{
+    background:url(img/uhuy.jpg);
+}
